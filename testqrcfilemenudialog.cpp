@@ -29,7 +29,6 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 
 #include "fileio.h"
 #include "qrcfile.h"
-#include "richelbilderbeekprogram.h"
 #include "trace.h"
 
 #pragma GCC diagnostic pop
@@ -81,7 +80,7 @@ ribi::About ribi::TestQrcFileMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "TestQrcFile",
     "tool to test the QrcFile class",
-    "the 20th of May 2013",
+    "December 11th of 2015",
     "2012-2015",
     "http://www.richelbilderbeek.nl/ToolTestQrcFile.htm",
     GetVersion(),
@@ -107,18 +106,9 @@ ribi::Help ribi::TestQrcFileMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::TestQrcFileMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const Program> p {
-    new ProgramTestQrcFile
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::TestQrcFileMenuDialog::GetVersion() const noexcept
 {
-  return "1.3";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::TestQrcFileMenuDialog::GetVersionHistory() const noexcept
@@ -128,21 +118,21 @@ std::vector<std::string> ribi::TestQrcFileMenuDialog::GetVersionHistory() const 
     "2013-05-20: version 1.1: some GUI modifications",
     "2013-11-05: version 1.2: conformized for ProjectRichelBilderbeekConsole",
     "2014-01-27: version 1.3: removed use of Boost.Filesystem and Boost.Program_Options",
+    "2015-12-11: version 2.0: moved to own GitHub",
   };
 }
 
 #ifndef NDEBUG
 void ribi::TestQrcFileMenuDialog::Test() noexcept
 {
-  //Test exactly once
   {
     static bool is_tested{false};
     if (is_tested) return;
     is_tested = true;
   }
-  assert(fileio::FileIo().IsRegularFile("../../Tools/ToolTestQrcFile/ToolTestQrcFile.qrc"));
+  assert(fileio::FileIo().IsRegularFile("../TestQrcFile/TestQrcFile.qrc"));
   {
-    QrcFile f("../../Tools/ToolTestQrcFile/ToolTestQrcFile.qrc");
+    QrcFile f("../TestQrcFile/TestQrcFile.qrc");
     assert(f.GetFiles().count("R.png"));
   }
 }

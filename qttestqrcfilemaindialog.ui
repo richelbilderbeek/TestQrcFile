@@ -14,8 +14,8 @@
    <string>TestQrcFile</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ToolTestQrcFile.qrc">
-    <normaloff>:/images/ToolTestQrcFileIcon.png</normaloff>:/images/ToolTestQrcFileIcon.png</iconset>
+   <iconset resource="TestQrcFile.qrc">
+    <normaloff>:/images/TestQrcFileIcon.png</normaloff>:/images/TestQrcFileIcon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog { 
@@ -30,7 +30,7 @@ QLineEdit { font: 16px, &quot;monospace&quot; }</string>
      <item>
       <widget class="QLabel" name="label_folder">
        <property name="text">
-        <string>QRC file folder: ../../</string>
+        <string>QRC file folder: ../</string>
        </property>
       </widget>
      </item>
@@ -49,7 +49,7 @@ QLineEdit { font: 16px, &quot;monospace&quot; }</string>
   </layout>
  </widget>
  <resources>
-  <include location="ToolTestQrcFile.qrc"/>
+  <include location="TestQrcFile.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -44,7 +44,7 @@ ribi::QtTestQrcFileMainDialog::QtTestQrcFileMainDialog(QWidget *parent) :
   #endif
   ui->setupUi(this);
 
-  ui->edit->setText("Tools/ToolTestQrcFile/ToolTestQrcFile.qrc");
+  ui->edit->setText("TestQrcFile/TestQrcFile.qrc");
 }
 
 ribi::QtTestQrcFileMainDialog::~QtTestQrcFileMainDialog() noexcept
@@ -54,7 +54,7 @@ ribi::QtTestQrcFileMainDialog::~QtTestQrcFileMainDialog() noexcept
 
 void ribi::QtTestQrcFileMainDialog::on_edit_textChanged(const QString &arg1)
 {
-  const std::string filename = "../../" + arg1.toStdString();
+  const std::string filename = "../" + arg1.toStdString();
   if (!fileio::FileIo().IsRegularFile(filename))
   {
     ui->text_result->clear();

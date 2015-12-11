@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>177</width>
-    <height>194</height>
+    <width>294</width>
+    <height>273</height>
    </rect>
   </property>
   <property name="font">
@@ -19,7 +19,7 @@
    <string>TestQrcFile</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ToolTestQrcFile.qrc">
+   <iconset>
     <normaloff>:/images/ToolTestQrcFileIcon.png</normaloff>:/images/ToolTestQrcFileIcon.png</iconset>
   </property>
   <property name="styleSheet">
@@ -37,7 +37,7 @@ QPushButton { font: 32px, &quot;monospace&quot; }</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolTestQrcFile.qrc">:/images/ToolTestQrcFileWelcome.png</pixmap>
+      <pixmap resource="TestQrcFile.qrc">:/images/TestQrcFileWelcome.png</pixmap>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -81,7 +81,7 @@ QPushButton { font: 32px, &quot;monospace&quot; }</string>
   </layout>
  </widget>
  <resources>
-  <include location="ToolTestQrcFile.qrc"/>
+  <include location="TestQrcFile.qrc"/>
  </resources>
  <connections/>
 </ui>
